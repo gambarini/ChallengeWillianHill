@@ -80,6 +80,10 @@
     <Compile Include="Test\MockCustomerRepository.cs" />
     <Compile Include="Domain\Bet.cs" />
     <Compile Include="REST\CustomerController.cs" />
+    <Compile Include="REST\BetController.cs" />
+    <Compile Include="Infrastructure\BetRepository.cs" />
+    <Compile Include="Test\BetTest.cs" />
+    <Compile Include="Test\MockBetRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
