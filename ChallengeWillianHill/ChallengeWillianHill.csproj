@@ -68,9 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="REST\CustomerControler.cs" />
-    <Compile Include="DTO\Customer.cs" />
     <Compile Include="Test\CustomerTest.cs" />
     <Compile Include="Helper\ControllerRequest.cs" />
+    <Compile Include="Domain\Customer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -81,8 +81,9 @@
   <ItemGroup>
     <Folder Include="csv\" />
     <Folder Include="REST\" />
-    <Folder Include="DTO\" />
     <Folder Include="Test\" />
     <Folder Include="Helper\" />
+    <Folder Include="Domain\" />
+    <Folder Include="New Folder\" />
   </ItemGroup>
 </Project>
