@@ -7,6 +7,7 @@ namespace ChallengeWillianHill.Domain
 	public class Customer
 	{
 		public int Id { get; set;}
+		public decimal WinRate { get; set;}
 	}
 
 }

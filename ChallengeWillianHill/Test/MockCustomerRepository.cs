@@ -11,10 +11,9 @@ namespace ChallengeWillianHill.Test
 	public class MockCustomerRepository : CustomerRepository
 	{
 		
-
-		public MockCustomerRepository (string csvString)
+		public MockCustomerRepository (string csvSettled)
 		{
-			this._csvSettled = csvString;
+			this._csvSettled = csvSettled;
 			
 		}
 	}

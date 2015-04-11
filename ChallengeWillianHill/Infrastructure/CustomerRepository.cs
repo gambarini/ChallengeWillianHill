@@ -15,10 +15,22 @@ namespace ChallengeWillianHill.Infrastructure
 			return _csvSettled.Split ('\n').Select (line => {
 				var columns = line.Split (',');
 
-				return new Customer {
-					Id = Convert.ToInt32 (columns [0])
+				return new Bet {
+					CustomerId = Convert.ToInt32 (columns [0]),
+					Settled = true,
+					Prize = Convert.ToInt32 (columns [4])
 				};
-			}).GroupBy (c => c.Id, (id, list) => new Customer{ Id = id}).ToList ();
+			}).GroupBy (b => b.CustomerId).Select (group => {
+
+				var wonBet = group.Count (bet => bet.Prize > 0); 
+				var totalBet = group.ToList().Count;
+				decimal rate = ((decimal)wonBet / (decimal)totalBet);
+
+				return new Customer {
+					Id = group.Key,
+					WinRate = rate * 100
+				};
+			}).ToList ();
 
 		}
 	}

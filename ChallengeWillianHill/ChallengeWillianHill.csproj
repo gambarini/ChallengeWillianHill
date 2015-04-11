@@ -73,6 +73,7 @@
     <Compile Include="Domain\Customer.cs" />
     <Compile Include="Infrastructure\CustomerRepository.cs" />
     <Compile Include="Test\MockCustomerRepository.cs" />
+    <Compile Include="Domain\Bet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
