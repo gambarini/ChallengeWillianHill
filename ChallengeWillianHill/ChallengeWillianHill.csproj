@@ -98,5 +98,6 @@
     <Folder Include="Helper\" />
     <Folder Include="Domain\" />
     <Folder Include="Infrastructure\" />
+    <Folder Include="Web\" />
   </ItemGroup>
 </Project>
