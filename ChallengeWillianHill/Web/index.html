@@ -31,14 +31,15 @@
                             <tr>
                                 <th>Customer Id</th>
                                 <th>Win Rate</th>
+                                <th>Average Bet</th>
 
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="customer in customers">
-                                <td >{{customer.Id}}</td>
-                                <td ng-class="dangerRate(customer.WinRate)">{{customer.WinRate}}%</td>
-
+                            <tr ng-class="dangerRate(customer.WinRate)" ng-repeat="customer in customers">
+                                <td>{{customer.Id}}</td>
+                                <td>{{customer.WinRate}}%</td>
+                                <td>${{customer.AverageBet}}</td>
                             </tr>
                             
                         </tbody>

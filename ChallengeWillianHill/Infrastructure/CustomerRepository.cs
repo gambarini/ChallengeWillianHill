@@ -24,7 +24,8 @@ namespace ChallengeWillianHill.Infrastructure
 				return new Bet {
 					CustomerId = Convert.ToInt32 (columns [0]),
 					Settled = true,
-					Prize = Convert.ToInt32 (columns [4])
+					Prize = Convert.ToInt32 (columns [4]),
+					Stake = Convert.ToInt32 (columns [3])
 				};
 			}).GroupBy (b => b.CustomerId).Select (group => {
 
@@ -32,9 +33,12 @@ namespace ChallengeWillianHill.Infrastructure
 				var totalBet = group.ToList().Count;
 				decimal rate = ((decimal)wonBet / (decimal)totalBet);
 
+				decimal average = Convert.ToDecimal(group.Average(bet => bet.Stake));
+
 				return new Customer {
 					Id = group.Key,
-					WinRate = rate * 100
+					WinRate = rate * 100,
+					AverageBet = average
 				};
 			}).ToList ();
 

@@ -11,6 +11,7 @@ namespace ChallengeWillianHill.Domain
 		public int CustomerId { get; set;}
 		public bool Settled { get; set;}
 		public int Prize { get; set;}
+		public int Stake { get; set;}
 	}
 
 

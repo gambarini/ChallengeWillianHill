@@ -8,6 +8,7 @@ namespace ChallengeWillianHill.Domain
 	{
 		public int Id { get; set;}
 		public decimal WinRate { get; set;}
+		public decimal AverageBet { get; set;}
 	}
 
 }
