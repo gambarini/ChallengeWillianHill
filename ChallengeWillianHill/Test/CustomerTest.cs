@@ -24,8 +24,8 @@ namespace ChallengeWillianHill.Test
 			var customers = controller.Get ();
 
 			Assert.AreEqual (2, customers.Count);
-			Assert.AreEqual (1, customers[0]);
-			Assert.AreEqual (2, customers[0]);
+			Assert.AreEqual (1, customers[0].Id);
+			Assert.AreEqual (2, customers[1].Id);
 
 
 		}

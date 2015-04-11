@@ -18,7 +18,7 @@ namespace ChallengeWillianHill.Infrastructure
 				return new Customer {
 					Id = Convert.ToInt32 (columns [0])
 				};
-			}).ToList ();
+			}).GroupBy (c => c.Id, (id, list) => new Customer{ Id = id}).ToList ();
 
 		}
 	}
