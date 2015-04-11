@@ -10,9 +10,12 @@ namespace ChallengeWillianHill.Test
 {
 	public class MockCustomerRepository : CustomerRepository
 	{
-		public override List<Customer> FindCustomers ()
+		
+
+		public MockCustomerRepository (string csvString)
 		{
-			return new List<Customer> ();
+			this._csvSettled = csvString;
+			
 		}
 	}
 
