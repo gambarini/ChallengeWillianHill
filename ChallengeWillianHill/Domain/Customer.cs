@@ -2,7 +2,7 @@ using System;
 using System.Web.Http;
 using System.Collections.Generic;
 
-namespace ChallengeWillianHill.DTO
+namespace ChallengeWillianHill.Domain
 {
 	public class Customer
 	{

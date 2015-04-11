@@ -71,6 +71,8 @@
     <Compile Include="Test\CustomerTest.cs" />
     <Compile Include="Helper\ControllerRequest.cs" />
     <Compile Include="Domain\Customer.cs" />
+    <Compile Include="Infrastructure\CustomerRepository.cs" />
+    <Compile Include="Test\MockCustomerRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -85,5 +87,6 @@
     <Folder Include="Helper\" />
     <Folder Include="Domain\" />
     <Folder Include="New Folder\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
 </Project>

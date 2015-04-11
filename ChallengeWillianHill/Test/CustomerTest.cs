@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using ChallengeWillianHill.Helper;
 using ChallengeWillianHill.REST;
+using ChallengeWillianHill.Infrastructure;
 
 namespace ChallengeWillianHill.Test
 {
@@ -15,7 +16,8 @@ namespace ChallengeWillianHill.Test
 		public void GetCustomerTest(){
 
 
-			var controller = new CustomerControler();
+
+			var controller = new CustomerControler(new MockCustomerRepository());
 			ControllerRequest.CreateRequest(controller);
 
 			var customers = controller.Get ();
