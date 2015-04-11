@@ -1,12 +1,20 @@
 ﻿using System;
+using Microsoft.Owin.Hosting;
 
 namespace ChallengeWillianHill
 {
 	class MainClass
 	{
+		const string HttpLocalHost = "http://*:9000";
+
 		public static void Main (string[] args)
 		{
-			Console.WriteLine ("Hello World!");
+			using (WebApp.Start<Startup> (HttpLocalHost))
+			{
+				System.Console.WriteLine("Listening on " + HttpLocalHost);
+				System.Console.WriteLine("Press [enter] to quit...");
+				System.Console.ReadLine();
+			}
 		}
 	}
 }
