@@ -68,5 +68,10 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="csv\Settled.csv" />
+    <None Include="csv\Unsettled.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="csv\" />
   </ItemGroup>
 </Project>
