@@ -19,7 +19,7 @@ namespace ChallengeWillianHill.Test
 			string csvSettled = "1,1,6,50,250\n2,1,3,5,0\n1,1,3,20,0\n2,1,6,200,0\n3,1,6,200,20\n3,1,6,200,30";
 
 
-			var controller = new CustomerControler(new MockCustomerRepository(csvSettled));
+			var controller = new CustomerController(new MockCustomerRepository(csvSettled));
 			ControllerRequest.CreateRequest(controller);
 
 			var customers = controller.Get ();

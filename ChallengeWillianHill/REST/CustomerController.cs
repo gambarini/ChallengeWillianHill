@@ -7,20 +7,22 @@ using ChallengeWillianHill.Infrastructure;
 namespace ChallengeWillianHill.REST
 {
 	[RoutePrefix("Customer")]
-	public class CustomerControler : ApiController
+	public class CustomerController : ApiController
 	{
 		CustomerRepository _repository;
 
-		public CustomerControler ()
+		public CustomerController ()
 		{
 			_repository = new CustomerRepository ();	
 		}
 
-		public CustomerControler (CustomerRepository repository)
+		public CustomerController (CustomerRepository repository)
 		{
 			this._repository = repository;
 		}
 
+		[Route()]
+		[HttpGet]
 		public List<Customer> Get(){
 
 			List<Customer> customers = _repository.FindCustomers ();

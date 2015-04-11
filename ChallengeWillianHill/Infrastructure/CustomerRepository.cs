@@ -3,12 +3,18 @@ using System.Web.Http;
 using System.Collections.Generic;
 using ChallengeWillianHill.Domain;
 using System.Linq;
+using System.IO;
 
 namespace ChallengeWillianHill.Infrastructure
 {
 	public class CustomerRepository
 	{
 		protected string _csvSettled = string.Empty;
+
+		public CustomerRepository ()
+		{
+			_csvSettled = File.ReadAllText ("csv/Settled.csv");	
+		}
 
 		public virtual List<Customer> FindCustomers ()
 		{
