@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Web.Http;
+using System.Collections.Generic;
+using ChallengeWillianHill.DTO;
 
 namespace ChallengeWillianHill.REST
 {
@@ -9,6 +11,12 @@ namespace ChallengeWillianHill.REST
 		
 		public CustomerControler ()
 		{
+		}
+
+		public List<Customer> Get(){
+
+			return new List<Customer> ();
+
 		}
 
 

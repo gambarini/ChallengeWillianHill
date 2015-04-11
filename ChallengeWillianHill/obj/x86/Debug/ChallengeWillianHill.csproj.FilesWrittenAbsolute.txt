@@ -12,3 +12,4 @@
 /Users/Gus/Projects/ChallengeWillianHill/ChallengeWillianHill/bin/Debug/System.Net.Http.Formatting.dll
 /Users/Gus/Projects/ChallengeWillianHill/ChallengeWillianHill/bin/Debug/System.Web.Http.dll
 /Users/Gus/Projects/ChallengeWillianHill/ChallengeWillianHill/bin/Debug/System.Web.Http.Owin.dll
+/Users/Gus/Projects/ChallengeWillianHill/ChallengeWillianHill/bin/Debug/nunit.framework.dll
