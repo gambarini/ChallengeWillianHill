@@ -69,7 +69,7 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="bet in bets">
-                                <td>{{bet.CustomerId}}</td>
+                                <td ng-class="customerHighlight(bet.CustomerId)">{{bet.CustomerId}}</td>
                                 <td>{{bet.Event}}</td>
                                 <td>${{bet.Stake}}</td>
                                 <td>${{bet.Prize}}</td>

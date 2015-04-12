@@ -2,19 +2,28 @@
 
 var app = angular.module('app', []);
 app.controller('controller', function($scope, $http) {
-    $scope.test= "John";
     
-    
-    $http.get('/Customer').success(function(data){
-        $scope.customers = data;
+    $http.get('/Customer').success(function(dataCustomers){
+        $scope.customers = dataCustomers;
+
+        $http.get('/Bet/Unsettle').success(function(dataBets){
+
+        	$scope.bets = dataBets;
+
+        });
+
     });
 
-    $http.get('/Bet/Unsettle').success(function(data){
-        $scope.bets = data;
-    });
-    
     $scope.dangerRate = function(rate){
         return rate > 60?'danger':'';
+    }
+
+    $scope.customerHighlight = function(customerId){
+    	 var foundCustomer = $scope.customers.filter(function(item) {
+    	 	return item.Id == customerId && item.WinRate > 60
+    	 });
+
+    	 return foundCustomer.length == 0 ? "" : "danger";
     }
                         
     
