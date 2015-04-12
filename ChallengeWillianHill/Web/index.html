@@ -57,9 +57,10 @@
                 </div>
 
                 <div class="row">
-                    <p>Red Customer Id are high rate winner</p>
-                    <p>Yellow Stake are bets 10x higher than the averange for a custumer</p>
-                    <p>Red Stake are bets 30x higher than the averange for a custumer</p>
+                    <p>Red Customer Id column are high rate winner</p>
+                    <p>Yellow Stake column are bets 10x higher than the averange for a custumer</p>
+                    <p>Red Stake column are bets 30x higher than the averange for a custumer</p>
+                    <p>Red Prize column are bets with prizes higher than $1000</p>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -75,7 +76,7 @@
                                 <td ng-class="customerHighlight(bet.CustomerId)">{{bet.CustomerId}}</td>
                                 <td>{{bet.Event}}</td>
                                 <td ng-class="stakeHighlight(bet.CustomerId, bet.Stake)">${{bet.Stake}}</td>
-                                <td>${{bet.Prize}}</td>
+                                <td ng-class="prizeHighlight(bet.Prize)">${{bet.Prize}}</td>
                             </tr>
                             
                         </tbody>

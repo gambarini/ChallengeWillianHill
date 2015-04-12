@@ -40,6 +40,11 @@ app.controller('controller', function($scope, $http) {
 
     	 return foundCustomerWarning.length == 0 ? "" : "warning";
     }
+
+    $scope.prizeHighlight = function(prize){
+
+    	 return prize > 1000 ? "danger" : "";
+    }
                         
     
 });
