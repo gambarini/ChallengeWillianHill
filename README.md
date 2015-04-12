@@ -4,6 +4,7 @@
 * OWIN/Katana Selfhost
 * Backend - REST API with WebAPI
 * FrontEnd - Angular + Bootstrap
+* Unit test NUnit
 
 ## To Run
 * 1 - Build the solution
