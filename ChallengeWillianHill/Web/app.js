@@ -8,6 +8,10 @@ app.controller('controller', function($scope, $http) {
     $http.get('/Customer').success(function(data){
         $scope.customers = data;
     });
+
+    $http.get('/Bet/Unsettle').success(function(data){
+        $scope.bets = data;
+    });
     
     $scope.dangerRate = function(rate){
         return rate > 60?'danger':'';

@@ -19,10 +19,12 @@ namespace ChallengeWillianHill.Infrastructure
 		public List<Bet> GetUnsettledBets ()
 		{
 			return _csvUnSettled.Split ('\n').Select (line => {
-				var columns = line.Split (',');
+
+				var columns = line.Replace("\r","").Split (',');
 
 				return new Bet {
 					CustomerId = Convert.ToInt32 (columns [0]),
+
 					Settled = false,
 					Prize = Convert.ToInt32 (columns [4]),
 					Stake = Convert.ToInt32 (columns [3])
