@@ -17,7 +17,7 @@
 <body ng-app="app" ng-controller="controller">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="row">
 
                     <h1>Customers</h1>
@@ -48,6 +48,7 @@
                 </div>
 
             </div>
+            <div class="col-md-1"></div>
             <div class="col-md-6">
                 <div class="row">
 
@@ -56,7 +57,9 @@
                 </div>
 
                 <div class="row">
-                    <p>-</p>
+                    <p>Red Customer Id are high rate winner</p>
+                    <p>Yellow Stake are bets 10x higher than the averange for a custumer</p>
+                    <p>Red Stake are bets 30x higher than the averange for a custumer</p>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -71,7 +74,7 @@
                             <tr ng-repeat="bet in bets">
                                 <td ng-class="customerHighlight(bet.CustomerId)">{{bet.CustomerId}}</td>
                                 <td>{{bet.Event}}</td>
-                                <td>${{bet.Stake}}</td>
+                                <td ng-class="stakeHighlight(bet.CustomerId, bet.Stake)">${{bet.Stake}}</td>
                                 <td>${{bet.Prize}}</td>
                             </tr>
                             

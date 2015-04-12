@@ -25,6 +25,21 @@ app.controller('controller', function($scope, $http) {
 
     	 return foundCustomer.length == 0 ? "" : "danger";
     }
+
+    $scope.stakeHighlight = function(customerId, stake){
+
+    	var foundCustomerDanger = $scope.customers.filter(function(item) {
+    	 	return item.Id == customerId && stake > (item.AverageBet*30);
+    	 });	
+
+    	 if (foundCustomerDanger.length != 0) return "danger";
+
+    	 var foundCustomerWarning = $scope.customers.filter(function(item) {
+    	 	return item.Id == customerId && stake > (item.AverageBet*10);
+    	 });
+
+    	 return foundCustomerWarning.length == 0 ? "" : "warning";
+    }
                         
     
 });
