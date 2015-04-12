@@ -10,3 +10,7 @@
 * 1 - Build the solution
 * 2 - find and execute the ChallangeWillianHill.exe inside the bin directory of the project.
 * 3 - Access with you browser the address http://localhost:9000/Web/
+ 
+## REST API
+* /Customer GET - All Customers with win rates and average bet
+* /Bet/Unsettle GET - All Unsettle bets
