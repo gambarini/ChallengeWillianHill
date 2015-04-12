@@ -12,6 +12,7 @@ namespace ChallengeWillianHill.Domain
 		public bool Settled { get; set;}
 		public int Prize { get; set;}
 		public int Stake { get; set;}
+		public int Event { get; set;}
 	}
 
 

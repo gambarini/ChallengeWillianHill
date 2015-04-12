@@ -61,6 +61,7 @@
                         <thead>
                             <tr>
                                 <th>Customer Id</th>
+                                <th>Event</th>
                                 <th>Stake</th>
                                 <th>Prize</th>
 
@@ -69,6 +70,7 @@
                         <tbody>
                             <tr ng-repeat="bet in bets">
                                 <td>{{bet.CustomerId}}</td>
+                                <td>{{bet.Event}}</td>
                                 <td>${{bet.Stake}}</td>
                                 <td>${{bet.Prize}}</td>
                             </tr>
